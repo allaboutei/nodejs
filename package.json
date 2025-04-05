@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+   
+    "express": "^5.1.0",
+    "lodash": "^4.17.21"
+  },
+ 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allaboutei/nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allaboutei/nodejs/issues"
+  },
+  "homepage": "https://github.com/allaboutei/nodejs#readme",
+  "description": ""
+}
