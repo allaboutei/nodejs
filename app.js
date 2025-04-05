@@ -1,23 +1,53 @@
-console.log("hello world");
+
+const { name } = require("ejs");
 const express = require("express");
 const app = express();
 
+app.set("views", "./views");
+app.set("view engine", "ejs");
+
+app.use((req,res,next)=>{
+  console.log("this is a middleware function");
+  next();
+})
+
+
+
 app.get("/", (req, res) => {
-  res.sendFile("./views/home.html", { root: __dirname });
+  let blogs = [
+    { title: "Blog 1 fuck", content: "This is the first blog" },
+    { title: "Blog 2", content: "This is the second blog" },
+  ];
+
+  
+
+  res.render("home", {
+    blogs,
+    title: "Home",
+  });
 });
+
 app.get("/about", (req, res) => {
-  res.sendFile("./views/about.html", { root: __dirname });
+  res.render("about", {
+    title: "About",
+  });
 });
-app.get("/about-us", (req, res) => {
-  res.redirect("/about");
-});
+
+app.use((req,res,next)=>{
+  console.log("this is a second middleware function");
+  next();
+})
+
 app.get("/contact", (req, res) => {
-  res.sendFile("./views/contact.html", { root: __dirname });
+  res.render("contact", {
+    title: "Contact",
+  });
 });
 
 app.use((req, res) => {
-  res.status(404);
-  res.sendFile("./views/404.html", { root: __dirname });
+  res.status(404).render("404", {
+    title: "404 Not Found",
+  });
 });
 
 app.listen(3000, () => {
