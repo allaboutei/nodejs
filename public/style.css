@@ -1,0 +1,48 @@
+body{
+    background-color: gray;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5cda2e;
+}
+nav a:hover{
+    color: green ;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.container{
+
+ margin:20px;
+}
+.blog-card{
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.blog-card h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.bg-img{
+   justify-content: center;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
