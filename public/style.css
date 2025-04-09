@@ -109,6 +109,21 @@ a{
 .create-btn:hover {
     background-color: green;
 }
+.delete-btn {
+    background-color: #ef2828;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
 
 .error-page {
     position: relative;
